@@ -1,0 +1,20 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &--right {
+    align-items: flex-end;
+  }
+}
+
+.contacts__phone {
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 5;
+
+  @include phones {
+    font-size: 16px;
+  }
+}

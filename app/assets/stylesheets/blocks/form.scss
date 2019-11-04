@@ -1,0 +1,119 @@
+.form__row {
+  display: flex;
+  margin-bottom: 20px;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.form__el {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+
+    @include tablets {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__el-title,
+.form__el-input {
+  display: flex;
+}
+
+.form__el-title {
+  margin-bottom: 5px;
+}
+
+.form__el-input {
+  background: $bg-color-light;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 12px 10px;
+  transition: border .3s;
+
+  &:active,
+  &:focus {
+    border: 1px solid $text-color-contrast;
+  }
+}
+
+.form__options-cap {
+  position: relative;
+  display: flex;
+
+  &::before,
+  &::after {
+    content: '';
+    display: flex;
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c9c9c9;
+    background-color: $bg-color-light;
+    background-image: linear-gradient(to top, #ededed 0%, #ffffff 100%);
+    margin-right: 5px;
+  }
+
+  &::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translate(-50%, -50%);
+    background-color: $text-color-contrast;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.form__options-title {
+  margin-bottom: 10px;
+}
+
+.form__options-row {
+  display: flex;
+  align-items: center;
+}
+
+.form__options-el {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.form__options-radio:checked + .form__options-cap::after {
+  width: 8px;
+  height: 8px;
+}
+
+.form__options-radio:focus + .form__options-cap::before {
+  border: 1px solid $text-color-contrast;
+}
+
+.form__controls {
+  flex-grow: 0;
+  align-self: flex-end;
+  margin-left: auto;
+}

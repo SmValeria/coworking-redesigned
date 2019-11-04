@@ -1,0 +1,9 @@
+include ../data/prices
+include ../mixins/cards
+
+section.prices
+  h2.section-title.prices__header Тарифы
+  +cards({
+    list: prices,
+    blockClass: "prices__cards"
+  })

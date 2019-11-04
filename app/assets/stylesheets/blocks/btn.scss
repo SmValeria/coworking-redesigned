@@ -1,0 +1,29 @@
+.btn {
+  color: $text-color-light;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 15px 20px;
+  letter-spacing: 0.01em;
+  background-color: $bg-color-dark;
+  transition: background-color .3s,
+              color .3s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $text-color-light;
+    background-color: $text-color-contrast;
+  }
+
+  &--bg-transparent {
+    background-color: transparent;
+    color: $text-color-contrast;
+    border: 3px solid $text-color-contrast;
+  }
+
+  &--right-angles {
+    border-radius: 0;
+  }
+}

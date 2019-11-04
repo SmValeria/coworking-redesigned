@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Gotham Pro", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.42;
+  color: $text-color-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  width: 95%;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--w770 {
+    max-width: 770px;
+  }
+
+  &--w700 {
+    max-width: 700px;
+  }
+
+  &--w610 {
+    max-width: 610px;
+  }
+
+  &--w570 {
+    max-width: 570px;
+  }
+
+  &--w560 {
+    max-width: 560px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Typography */
+
+a {
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  border-color: transparent;
+  outline-color: transparent;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  border-color: transparent;
+  outline-color: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+/*Changing color of placeholders*/
+::-webkit-input-placeholder {color: rgba($text-color-main, 0.5);}
+::-moz-placeholder          {color: rgba($text-color-main, 0.5);}/* Firefox 19+ */
+:-moz-placeholder           {color: rgba($text-color-main, 0.5);}/* Firefox 18- */
+:-ms-input-placeholder      {color: rgba($text-color-main, 0.5);}
+
+
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

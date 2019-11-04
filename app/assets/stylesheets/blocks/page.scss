@@ -1,0 +1,20 @@
+.page {
+  padding: 40px 0;
+}
+
+.page__container {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.page__breadcrumbs {
+  margin-bottom: 25px;
+}
+
+.page__menu {
+  margin-bottom: 30px;
+}

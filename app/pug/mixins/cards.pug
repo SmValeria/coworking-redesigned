@@ -1,0 +1,15 @@
+mixin cards({list, blockClass})
+  ul.cards(class=blockClass)
+    each item in list
+      li.cards__item
+        .cards__visual
+          +image({
+            path: item.imagePath,
+            blockClass: 'cards__img',
+            altText: item.title
+          })
+          .cards__img-cap(class=`${item.vip ? "cards__img-cap--vip" : ""}`)
+            .cards__img-title= item.title
+        .cards__desc
+          h3.cards__title= item.textTitle
+          .cards__text= item.text

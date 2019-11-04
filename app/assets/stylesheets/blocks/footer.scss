@@ -1,0 +1,34 @@
+.footer {
+  padding: 15px 0;
+  margin-top: auto;
+  color: $text-color-light;
+  background-color: $bg-color-dark;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__copyright {
+  max-width: 265px;
+
+  @include tablets {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__logo {
+  @include tablets {
+    margin-bottom: 15px;
+  }
+}

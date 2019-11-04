@@ -1,0 +1,9 @@
+include ../data/partners
+include ../mixins/logos
+
+section.partners
+  h2.subtitle.partners__header Партнёры
+  +logos({
+    list: partners,
+    blockClass: 'partners__logos'
+  })

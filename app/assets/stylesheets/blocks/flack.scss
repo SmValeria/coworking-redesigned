@@ -1,0 +1,13 @@
+.flack {
+  padding: 30px 2.5%;
+  font-size: 18px;
+  text-align: center;
+  color: $text-color-light;
+  background-color: $bg-color-dark;
+  background-image: url("../images/pattern.png");
+}
+
+.flack__link {
+  color: $text-color-contrast;
+  font-weight: 700;
+}

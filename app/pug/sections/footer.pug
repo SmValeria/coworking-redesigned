@@ -1,0 +1,20 @@
+include ../data/socials
+
+include ../mixins/copyright
+include ../mixins/logo
+include ../mixins/socials
+
+.footer
+  .footer__container.container.container--w1160
+    +copyright({
+      blockClass: "footer__copyright"
+    })
+    +logo({
+      blockClass: "footer__logo",
+      image: true,
+      text: false
+    })
+    +socials({
+      list: socials,
+      blockClass: "footer__socials socials--footer"
+    })

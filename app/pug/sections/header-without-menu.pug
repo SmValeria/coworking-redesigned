@@ -1,0 +1,13 @@
+include ../mixins/logo
+include ../mixins/contacts
+
+.header
+  .header__container.container
+    +logo({
+      blockClass: "header__logo",
+      image: true,
+      text: false
+    })
+    +contacts({
+      blockClass: 'header__contacts contacts--right'
+    })

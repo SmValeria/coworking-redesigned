@@ -1,0 +1,16 @@
+include ../data/news
+
+include ../mixins/photo-list
+include ../mixins/pagination
+
+section.last-news
+  .last-news__container.container.container--full
+    h2.section-title.last-news__header Последние новости
+    +photo-list({
+      list: news,
+      blockClass: 'last-news__photo-list'
+    })
+    +pagination({
+      blockClass: 'last-news__pagination',
+      pagesCount: 7
+    })

@@ -1,0 +1,21 @@
+include ../data/menu
+
+include ../mixins/menu
+include ../mixins/logo
+include ../mixins/contacts
+
+.header
+  .header__container.container
+    +logo({
+      blockClass: "header__logo",
+      image: true,
+      text: false
+    })
+    +menu({
+      list: menu,
+      blockClass: "header__menu menu--horizontal menu--light menu--header"
+    })
+    +contacts({
+      blockClass: 'header__contacts contacts--right'
+    })
+

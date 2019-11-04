@@ -1,0 +1,25 @@
+mixin photo-list({list, blockClass})
+  ul.photo-list(class=blockClass)
+    each item in list
+      li.photo-list__item
+        article.photo-list__info
+          .photo-list__visual
+            if(item.iconPath)
+              +image({
+                path: item.iconPath,
+                blockClass: 'photo-list__img',
+                altText: item.title
+              })
+            else
+              +image({
+                path: 'logo.png',
+                blockClass: 'photo-list__img photo-list__img--no',
+                altText: item.title
+              })
+          .photo-list__desc
+            time.photo-list__date(
+              datetime=`${item.time.split('.')[2]}-${item.time.split('.')[1]}-${item.time.split('.')
+                  [0]}`
+            )= item.time
+            h3.photo-list__title= item.title
+            .photo-list__text= item.text

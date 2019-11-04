@@ -1,0 +1,10 @@
+mixin menu({list, blockClass})
+  nav.menu(class=blockClass)
+    ul(class="menu__list")
+      each item in list
+        li(class=`menu__item menu__item--${item.modifier}
+        ${(item.name === pageName) ? "menu__item--active" : ""}`)
+            a(
+              class="menu__link"
+              href=item.link
+            ) #{item.name}

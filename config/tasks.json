@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "clean": "./config/tasks/clean.js",
+    "pug": "./config/tasks/pug.js",
+    "styles": "./config/tasks/styles.js",
+    "images": "./config/tasks/images.js",
+    "sprite": "./config/tasks/sprite.js",
+    "fonts": "./config/tasks/fonts.copy.js",
+    "server": "./config/tasks/server.js",
+    "watch": "./config/tasks/watch.js"
+  }
+}

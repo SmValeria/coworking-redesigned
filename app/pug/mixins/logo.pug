@@ -1,0 +1,12 @@
+include ../data/menu
+mixin logo({blockClass, image, text})
+  a.logo(class=blockClass href=menu[0].link)
+    if(image)
+      +image({
+        path: 'logo.png',
+        blockClass: 'logo__img',
+        altText: 'Logo'
+      })
+    else if (text)
+      h1.logo__text= text
+

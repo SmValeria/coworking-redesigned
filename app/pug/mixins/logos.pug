@@ -1,0 +1,10 @@
+mixin logos({list, blockClass})
+  ul.logos(class=blockClass)
+    each item in list
+      li.logos__item
+        a.logos__link(href="#")
+          +image({
+            path: item.imgPath,
+            blockClass: 'logos__image',
+            altText: item.title
+          })

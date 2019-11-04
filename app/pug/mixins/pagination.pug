@@ -1,0 +1,14 @@
+- let page = 2;
+
+mixin pagination({blockClass, pagesCount})
+  .pagination(class=blockClass)
+        .pagination__text Страница 1 из #{pagesCount}
+        .pagination__controls
+          a.pagination__prev.pagination__arrows(href='#')
+          ul.pagination__list
+            li.pagination__item.pagination__item--active
+              a.pagination__link(href='#') 1
+            while page <= pagesCount
+              li.pagination__item.pagination__item
+                a.pagination__link(href='#')= page++
+          a.pagination__next.pagination__arrows(href='#')

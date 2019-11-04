@@ -1,0 +1,16 @@
+include ../data/comments
+
+include ../mixins/photo-list
+include ../mixins/pagination
+
+section.reviews
+  .reviews__container.container.container--full
+    h2.section-title.reviews__header Отзывы
+    +photo-list({
+      list: comments,
+      blockClass: 'reviews__photo-list'
+    })
+    +pagination({
+      blockClass: 'reviews__pagination',
+      pagesCount: 7
+    })

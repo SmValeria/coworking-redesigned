@@ -1,0 +1,11 @@
+include ../data/features-list
+include ../mixins/icon-list
+
+section.features
+  .features__container.container.container--full
+    h2.subtitle.features__header топ-тариф
+    +icon-list({
+      list: features,
+      blockClass: 'features__icon-list icon-list--one-item',
+      icon: false
+    })

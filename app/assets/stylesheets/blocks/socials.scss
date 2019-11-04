@@ -1,0 +1,92 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+
+  &--sidebar {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &--footer {
+    display: none;
+
+    @include tablets {
+      display: block;
+    }
+  }
+}
+
+.socials__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.socials__list {
+  display: flex;
+  align-items: center;
+
+  &--center {
+    align-self: center;
+  }
+}
+
+.socials__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $bg-color-grey;
+  transition: background-color 0.3s;
+  overflow: hidden;
+
+  &--bg-transparent {
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: $text-color-contrast;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
+
+.socials__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: flex;
+    background-repeat: no-repeat;
+  }
+}
+
+.socials__item--vk .socials__link::before{
+  @include sprite($vk);
+}
+
+.socials__item--fb .socials__link::before{
+  @include sprite($fb);
+}
+
+.socials__item--g .socials__link::before{
+  @include sprite($google);
+}
+
+.socials__item--tw .socials__link::before{
+  @include sprite($twitter);
+}
+
+.socials__item--mail .socials__link::before{
+  @include sprite($mail);
+}
+

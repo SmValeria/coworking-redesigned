@@ -1,0 +1,28 @@
+.sidebar {
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 20px;
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar__socials {
+  align-items: center;
+}
+
+.sidebar__flack {
+  margin-bottom: 30px;
+}
+
+.sidebar__partners,
+.sidebar__features {
+  padding: 30px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e8e9ed;
+}
+

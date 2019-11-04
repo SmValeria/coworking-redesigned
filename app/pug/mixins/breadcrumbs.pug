@@ -1,0 +1,8 @@
+include ../data/menu
+
+mixin breadcrumbs({blockClass, pageName})
+  .breadcrumbs(class=blockClass)
+    ul.breadcrumbs__list
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href=menu[0].link) Главная
+      li.breadcrumbs__item= pageName

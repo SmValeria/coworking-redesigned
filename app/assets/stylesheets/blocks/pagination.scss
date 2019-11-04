@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__text {
+  color: $text-color-grey;
+  margin-right: 20px;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.pagination__controls {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__arrows {
+  @include sprite($arrow);
+}
+
+.pagination__prev {
+  transform: rotate(180deg);
+  margin-right: 12px;
+  opacity: 0.5;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  margin-right: 7px;
+}
+
+.pagination__item {
+  padding: 6px 10px;
+  font-weight: 700;
+  transition: color 0.3s;
+
+
+  &--active {
+    border-radius: 3px;
+    color: $text-color-contrast;
+    background-color: $bg-color-dark;
+  }
+
+  &:hover {
+    color: $text-color-contrast;
+  }
+}

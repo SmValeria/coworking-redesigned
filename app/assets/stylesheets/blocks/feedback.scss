@@ -1,0 +1,21 @@
+.feedback {
+  padding: 60px 0;
+}
+
+.feedback__container {
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  margin-left: 0;
+
+  @include tablets {
+    margin-left: auto;
+  }
+}
+
+.feedback__box {
+  padding: 35px 0;
+}
+
+.feedback__header {
+  margin-bottom: 15px;
+}

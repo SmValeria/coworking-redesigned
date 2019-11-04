@@ -1,0 +1,14 @@
+mixin icon-list({list, blockClass, itemClass, icon})
+  ul.icon-list(class=blockClass)
+    each item in list
+      li.icon-list__item(
+        class=`icon-list__item--${item.iconModifier}
+        ${itemClass ? itemClass : ""}`)
+        if(icon)
+          .icon-list__icon
+        .icon-list__info
+          h3.icon-list__title= item.title
+          .icon-list__text= item.text
+          ul.icon-list__inner-list
+            each subItem in item.list
+              li.icon-list__inner-item= subItem

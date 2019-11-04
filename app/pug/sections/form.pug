@@ -1,0 +1,51 @@
+form.form(action="/" method="get")
+  .form__row
+    .form__el
+      label.form__el-title(for="name") Ваше имя
+      input.form__el-input(
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Андрей"
+      )
+    .form__el
+      label.form__el-title(for="link") Ссылка на профиль VK
+      input.form__el-input(
+        type="text"
+        id="link"
+        name="link"
+        placeholder="vk.com/example"
+      )
+  .form__row
+    .form__el
+      label.form__el-title(for="review") Текст отзыва
+      textarea.form__el-input.form__el-input--textarea(
+        id="review"
+        name="review"
+        rows="4"
+      )
+  .form__row
+    fieldset.form__options
+      legend.form__options-title Отображать фото в отзыве?
+      .form__options-row
+        .form__options-el
+          input.form__options-radio(
+            type="radio"
+            name="is_photo"
+            id="yes"
+            checked="checked"
+            class="visuallyhidden"
+          )
+          label.form__options-cap(for="yes") Да
+        .form__options-el
+          input.form__options-radio(
+            type="radio"
+            name="is_photo"
+            id="no"
+            class="visuallyhidden"
+          )
+          label.form__options-cap(for="no") Нет
+    .form__controls
+      button.btn.btn--dark.form__btn(
+        type="submit"
+      ) Отправить
